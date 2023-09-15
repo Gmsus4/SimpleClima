@@ -1,6 +1,6 @@
 const input = document.querySelector('.input_text');
 const button = document.querySelector('.btn');
-const img = document.querySelector('.img'); //Clima
+const img = document.querySelector('.img');
 const imgCountry = document.querySelector('.country');
 const display = document.querySelector('.display');
 
@@ -9,15 +9,12 @@ const spanNameLocation = document.querySelector('.name');
 const spanTextHumedad = document.querySelector('.humedad');
 const spanTextViento = document.querySelector('.viento');
 
-//const APIKEYwathermap = 'cb7c3c0831d448c0885164556231509';
 const APIKEY = 'ccf99b6dca26359e28390bd47ee4a0c1';
 let value;
 let weatherData;
 
 async function getWeather(){
-    //const urlwathermap = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${value}&aqi=no`;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${APIKEY}`;
-    console.log(url);
     await fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -26,12 +23,9 @@ async function getWeather(){
             return response.json();
         })
         .then(data => {
-            // Aquí puedes trabajar con los datos recibidos en formato JSON
-            console.log(data.main.temp);
             weatherData = data;
         })
         .catch(error => {
-            // Manejo de errores
             console.error(error);
         });
 }
@@ -40,7 +34,7 @@ async function setData(){
     await getWeather();
     display.classList.remove('display');
     const country = weatherData.sys.country.toLowerCase()
-    //img.src = weatherData.current.condition.icon;
+
     spanTextClima.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}°c`;
     spanNameLocation.innerHTML = weatherData.name;
     spanTextHumedad.innerHTML = `${weatherData.main.humidity} %`;
@@ -68,9 +62,7 @@ async function setData(){
             img.src = './img/snow.png';
             break;
         default:
-            // Manejo de un caso por defecto si ninguno de los casos anteriores coincide.
     }
-    //console.log(weatherData.current.temp_c)
 }
 
 button.addEventListener('click', async(e) => {
