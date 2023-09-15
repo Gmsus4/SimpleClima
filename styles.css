@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+h1{
+    font-family: Century Gothic;
+}
+
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.contain{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-contain{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    /* padding: 20px; */
+    border-radius: 10px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+.card-contain .form input{
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.card-contain .form button{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.res{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.display{
+    display: none;
+}
+
+.res .name{
+    font-size: 20px;
+    text-align: left;
+}
+
+.res_name .country{
+    margin-left: 10px;
+}
+
+.res_header{
+    padding: 0 40px 20px 40px;
+}
+
+.res_footer{
+    background-color: #495057;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+
+.res_footer div img{
+    width: 30px;
+    height: 30px;
+}
+
+.res_footer div span{
+    color: #f8f9fa;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+}
+
+.wind, .humidity{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.wind .wind_info, .humidity .humidity_info{
+    display: flex;
+    flex-direction: column;
+}

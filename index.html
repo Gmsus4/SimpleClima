@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Minimalist</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a30c896652.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contain">
+        <h1>Simple Clima</h1>
+        <div class="card-contain">
+            <form action="">
+                <div class="form">
+                    <input type="text" placeholder="Location" class="input_text">
+                    <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="res display">
+                    <div class="res_header">
+                        <div class="res_name">
+                            <h2><span class="name"></span><img class="country"></img></h2>
+                        </div>
+                        <div class="res_data">
+                            <img src="" alt="" class="img">
+                            <h2><span class="clima"></span></h2>
+                        </div>
+                    </div>
+                    <div class="res_footer">
+                        <div class="humidity">
+                            <img src="./img/humidity.png" alt="">
+                            <div class="humidity_info">
+                                <span class="humedad"></span>
+                                <span>Humedad</span>
+                            </div>
+                        </div>
+                        <div class="wind">
+                            <img src="./img/wind.png" alt="">
+                            <div class="wind_info">
+                                <span class="viento"></span>
+                                <span>Viento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
