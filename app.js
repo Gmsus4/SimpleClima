@@ -25,16 +25,19 @@ async function getWeather() {
 async function setData() {
     try {
         const weatherData = await getWeather();
-        const country = weatherData.sys.country.toLowerCase();
-        displayData.classList.remove('display');
+        displayData.classList.remove('display');    
         displayFooter.classList.remove('display');
         display.classList.remove('display');
         displayHeader.classList.remove('error');
         imgCountry.classList.remove('set_img_error');
+
+        const country = weatherData.sys.country.toLowerCase();
+
         spanTextClima.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}°c`;
         spanNameLocation.innerHTML = weatherData.name;
         spanTextHumedad.innerHTML = `${weatherData.main.humidity} %`;
         spanTextViento.innerHTML = `${weatherData.wind.speed} m/s`;
+
         imgCountry.src = `https://flagcdn.com/16x12/${country}.png`;
 
         switch (weatherData.weather[0].main) {
