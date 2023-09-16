@@ -41,6 +41,11 @@ h2{
     padding: 20px;
 }
 
+.btn{
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
 .card-contain .form input{
     display: inline-block;
     height: 30px;
